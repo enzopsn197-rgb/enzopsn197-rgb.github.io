@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Laura Pascottini Boutique · Ropa de mujer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdfcfa;--ink:#000;--mute:#6b6560;--line:#e4ddd6;--blush:#efe2dd;--sand:#e8e1d6;--rose:#d9bfb8;--btn:#000;--btnt:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121110;--ink:#f6f1ec;--mute:#a69e96;--line:#2e2a27;--blush:#2a2220;--sand:#25221e;--rose:#4a3733;--btn:#f6f1ec;--btnt:#121110;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121110;--ink:#f6f1ec;--mute:#a69e96;--line:#2e2a27;--blush:#2a2220;--sand:#25221e;--rose:#4a3733;--btn:#f6f1ec;--btnt:#121110;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 16px/1.6 Jost,system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+header .brand{font:500 1.15rem/1 "Cormorant Garamond",serif;letter-spacing:.14em;text-decoration:none}
+header nav a{margin-left:18px;text-decoration:none;font-size:.9rem}
+header nav a:hover{text-decoration:underline}
+.hero{text-align:center;padding:64px 0 56px}
+.logo{display:block;line-height:.9;margin:0}
+.logo .l{font:400 clamp(2.6rem,11vw,5.6rem)/1 "Cormorant Garamond",serif;letter-spacing:.02em}
+.logo .p{font:400 clamp(3rem,13vw,6.6rem)/1 "Pinyon Script",cursive;margin-left:-.12em}
+.logo .b{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:10px;font:300 .85rem/1 Jost,sans-serif;letter-spacing:.5em}
+.logo .b::before,.logo .b::after{content:"";width:clamp(30px,12vw,110px);border-top:1px solid var(--ink)}
+.hero h1{font:400 clamp(1.5rem,4.5vw,2.2rem)/1.25 "Cormorant Garamond",serif;max-width:20ch;margin:36px auto 12px}
+.hero p{max-width:46ch;margin:0 auto 26px;color:var(--mute)}
+.btn{display:inline-block;background:var(--btn);color:var(--btnt);padding:13px 26px;border:1px solid var(--btn);text-decoration:none;font:400 .95rem Jost,sans-serif;cursor:pointer;border-radius:0}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink);margin-left:8px}
+.btn:focus-visible,.chip:focus-visible,a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+section{padding:56px 0}
+h2{font:400 clamp(1.7rem,5vw,2.4rem)/1.15 "Cormorant Garamond",serif;margin:0 0 8px}
+.sub{color:var(--mute);margin:0 0 24px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:24px}
+.chip{flex:none;border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 18px;font:300 .92rem Jost,sans-serif;cursor:pointer;border-radius:999px}
+.chip[aria-pressed="true"]{background:var(--btn);color:var(--btnt);border-color:var(--btn)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 14px}
+@media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr);gap:28px 22px}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{display:flex;flex-direction:column}
+.ph{position:relative;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;font:400 clamp(1.4rem,5vw,2rem)/1.05 "Pinyon Script",cursive}
+.ph small{position:absolute;bottom:8px;left:0;right:0;font:300 .7rem Jost,sans-serif;color:var(--mute)}
+.tag{position:absolute;top:8px;left:8px;background:var(--bg);color:var(--ink);font:400 .72rem Jost,sans-serif;padding:3px 9px;border-radius:999px}
+.card h3{font:500 1.15rem/1.2 "Cormorant Garamond",serif;margin:12px 0 2px}
+.price{font-weight:400;margin:0 0 2px}
+.stock{color:var(--mute);font-size:.82rem;margin:0 0 10px}
+.card .btn{margin-top:auto;text-align:center;padding:10px 12px;font-size:.88rem}
+.how{background:var(--sand)}
+.steps{display:grid;gap:22px;margin-top:24px}
+@media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps h3{font:500 1.25rem "Cormorant Garamond",serif;margin:0 0 4px}
+.steps p{margin:0;color:var(--mute)}
+.contact{text-align:center}
+.contact .big{font:400 clamp(1.8rem,7vw,3rem)/1.1 "Cormorant Garamond",serif;display:block;margin:10px 0 22px;text-decoration:none}
+footer{border-top:1px solid var(--line);padding:24px 0 32px;text-align:center;color:var(--mute);font-size:.85rem}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:0 4px 14px rgba(0,0,0,.25);border-radius:999px;padding:13px 22px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="brand" href="#inicio">LAURA PASCOTTINI</a>
+  <nav><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a></nav>
+</header>
+
+<div class="hero" id="inicio">
+  <h1 class="logo" aria-label="Laura Pascottini Boutique"><span><span class="l">LAURA</span><span class="p">Pascottini</span></span><span class="b">BOUTIQUE</span></h1>
+  <h2 style="margin-top:36px;max-width:20ch;margin-inline:auto">Ropa de mujer para lucir cada día</h2>
+  <p>Vestidos, conjuntos, blusas, shorts y accesorios. Elegí tu prenda y pedila por WhatsApp.</p>
+  <a class="btn" href="#catalogo">Ver catálogo</a><a class="btn alt" href="https://instagram.com/laurapascottini_boutique_" target="_blank" rel="noopener">Instagram</a>
+</div>
+</div>
+
+<section id="catalogo">
+<div class="wrap">
+  <h2>Catálogo</h2>
+  <p class="sub">Precios en guaraníes. Las unidades son limitadas.</p>
+  <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+  <div class="grid" id="grid"></div>
+</div>
+</section>
+
+<section class="how">
+<div class="wrap">
+  <h2>Cómo comprar</h2>
+  <div class="steps">
+    <div><h3>Elegí</h3><p>Mirá el catálogo y tocá “Pedir” en la prenda que te guste.</p></div>
+    <div><h3>Escribinos</h3><p>Se abre WhatsApp con el mensaje listo. Contanos tu talle y color.</p></div>
+    <div><h3>Recibí</h3><p>Coordinamos el pago y la entrega o retiro con vos.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="contact" id="contacto">
+<div class="wrap">
+  <h2>Hablemos</h2>
+  <a class="big" href="https://wa.me/595972373854">0972 373 854</a>
+  <a class="btn" href="https://wa.me/595972373854?text=Hola%2C%20quiero%20consultar%20por%20la%20ropa%20de%20Laura%20Pascottini%20Boutique" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  <a class="btn alt" href="https://instagram.com/laurapascottini_boutique_" target="_blank" rel="noopener">@laurapascottini_boutique_</a>
+</div>
+</section>
+
+<footer><div class="wrap">© Laura Pascottini Boutique · Ropa de mujer</div></footer>
+<a class="btn wa" href="https://wa.me/595972373854" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+var P=[
+["Vestidos","Vestido",240000,2],["Vestidos","Vestido broderie",120000,2],["Vestidos","Vestido de rayas",150000,3],["Vestidos","Vestido suplex",120000,4],
+["Conjuntos","Conjunto",150000,2],["Conjuntos","Conjunto transparente",200000,1],["Conjuntos","Conjunto de lino",200000,2],["Conjuntos","Conjunto de blusas",200000,3],["Conjuntos","Conjunto de pollera",150000,1],
+["Blusas y remeras","Blusa",45000,3],["Blusas y remeras","Blusa",50000,5],["Blusas y remeras","Blusa",85000,5],["Blusas y remeras","Remera japonesa",60000,2],["Blusas y remeras","Remera estampada",50000,2],["Blusas y remeras","Body",50000,5],
+["Shorts y palazos","Short",50000,5],["Shorts y palazos","Short camisa",230000,1],["Shorts y palazos","Palazo",110000,2],
+["Accesorios","Cinto",80000,4]];
+var C={"Vestidos":"var(--blush)","Conjuntos":"var(--sand)","Blusas y remeras":"var(--rose)","Shorts y palazos":"var(--sand)","Accesorios":"var(--blush)"};
+var cats=["Todo"].concat(Object.keys(C)),cur="Todo";
+function gs(n){return n.toLocaleString("es-PY").replace(/,/g,".")+" Gs"}
+function wa(p){return "https://wa.me/595972373854?text="+encodeURIComponent("Hola, quiero pedir: "+p[1]+" ("+gs(p[2])+"). ¿Qué talles y colores tienen?")}
+function chips(){var h=document.getElementById("chips");h.innerHTML="";cats.forEach(function(c){var b=document.createElement("button");b.className="chip";b.textContent=c;b.setAttribute("aria-pressed",c===cur);b.onclick=function(){cur=c;chips();draw()};h.appendChild(b)})}
+function draw(){var g=document.getElementById("grid");g.innerHTML="";P.filter(function(p){return cur==="Todo"||p[0]===cur}).forEach(function(p){
+var d=document.createElement("article");d.className="card";
+d.innerHTML='<div class="ph" style="background:'+C[p[0]]+'">'+(p[3]===1?'<span class="tag">Última unidad</span>':'')+p[1]+'<small>Foto próximamente</small></div><h3>'+p[1]+'</h3><p class="price">'+gs(p[2])+'</p><p class="stock">'+(p[3]===1?'1 disponible':p[3]+' disponibles')+'</p><a class="btn" target="_blank" rel="noopener" href="'+wa(p)+'">Pedir por WhatsApp</a>';
+g.appendChild(d)})}
+chips();draw();
+</script>
+</body>
+</html>
